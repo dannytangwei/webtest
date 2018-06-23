@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page4</title>
+    <style>
+        *{ margin: 0px; padding: 0px }
+        .wrapper {
+            width: 960px;
+            margin: 0 auto;
+            border: 1px solid;
+        }
+        /* 清除浮动，让wrapper这个父元素具有高度从而可以包含这3个浮动的子元素。 */
+        .wrapper::after{
+            content: ".";
+            display: block;
+            height: 0px;
+            visibility: hidden;
+            clear: both;
+        }
+        li{
+            list-style-type: none;
+        }
+        nav{
+            width: 150px;
+            float: left;
+            background: beige;
+        }
+        article{
+            width: 600px;
+            float: left;
+            background:pink;
+        }
+        aside{
+            width: 210px;
+            float: left;
+            background: beige;
+        }
+        /* 因为footer放在.wrapper里面，所以.wrapper的清除浮动对footer无效。 */
+        /* 所以在footer之前插入一个非浮动的清除元素 */
+        footer{
+            background: gainsboro;
+            margin-top: 30px;
+        }
+        .clearfloat { clear: both; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <head>
+            <h1>我是页眉head</h1>
+        </head>
+        <nav>
+            <ul>
+                <li>123</li>
+                <li>456</li>
+                <li>789</li>
+                <li>23434</li>
+            </ul>
+        </nav>
+        <article>官方原文如下：“公司经过反复慎重研究，决定分步实施在香港和境内的上市计划，即先在香港上市之后，再择机通过发行CDR的方式在境内上市。为此，公司将向中国证券监督管理委员会发起申请，推迟召开发审委会议审核公司的CDR发行申请。”</article>
+        <aside>第十七届发行审核委员会定于2018年6月19日召开2018年第88次发行审核委员会工作会议，审核小米集团公开发行存托凭证申请.3.如果父元素有确定的宽度，则屏幕变小时其中的文本是不会自动换行的。3.如果父元素有确定的宽度，则屏幕变小时其中的文本是不会自动换行的。</aside>
+        <div class="clearfloat"></div>
+        <footer>
+            <p>我是页脚，一般放在最下面的一行</p> 
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 让div这个父元素盒子居中 */
+         .pagination{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* 让ul这个块级元素的文本（和行内元素）居中 */
+        .pagination ul{
+            list-style-type: none;
+            text-align: center;
+        }
+        .pagination li{
+            display: inline;
+        }
+        a {
+            padding: 0 10px;
+            border-radius: 2px;
+            box-shadow: 0 1px 0 #5a5b5c inset, 0 1px 0 #080808;
+            background: linear-gradient(top, #434345, #2f3032);
+        }
+    </style>
+</head>
+<body>
+        <div class="pagination">
+                <ul>
+                        <li><a href="#">Prev</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">Next</a></li>
+                </ul>
+            </div>
+</body>
+</html>

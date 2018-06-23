@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+</head>
+<body>
+    <form onsubmit="return addItem()" action="#">
+        <span>Grocery Items:</span>
+        <input type="text" id="ItemToAdd" placeholder="请输入内容..." />
+        <input type="button" value="Add" onclick="addItem()" />
+    </form>
+    <span>Grocery List:</span>
+     <ol id="mylist"></ol>       
+</body>
+<script>
+    //每次点击按钮都插入一个li节点（element节点），不覆盖之前的li节点
+    var liStr = '';
+    function addItem(){
+        var myItem = document.getElementById("ItemToAdd").value;
+        var olEl = document.getElementById("mylist");
+        // 插入一个li节点（element节点）
+        liStr += "<li>"+myItem+"</li>";
+        olEl.innerHTML = liStr;
+        return false;
+    }
+    
+</script>
+</html>
